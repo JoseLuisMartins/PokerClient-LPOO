@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/back_texture"
+    tools:context="gui.PlayingActivity"
+    android:id="@+id/relLayout"
+    android:visibility="visible"
+    android:keepScreenOn="true">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raise"
+        android:id="@+id/raiseBox"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="16dp"
+        android:checked="false"
+        android:onClick="raise"
+        android:layout_above="@+id/foldBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call/Check"
+        android:id="@+id/callCheckBox"
+        android:checked="false"
+        android:onClick="callCheck"
+        android:layout_alignTop="@+id/raiseSlider"
+        android:layout_alignRight="@+id/playbtn"
+        android:layout_alignEnd="@+id/playbtn"
+        android:layout_marginRight="31dp"
+        android:layout_marginEnd="31dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fold"
+        android:id="@+id/foldBox"
+        android:layout_marginBottom="18dp"
+        android:checked="false"
+        android:onClick="fold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/raiseBox"
+        android:layout_alignStart="@+id/raiseBox" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All-In"
+        android:id="@+id/allInBox"
+        android:checked="false"
+        android:onClick="allIn"
+        android:layout_alignTop="@+id/foldBox"
+        android:layout_alignLeft="@+id/callCheckBox"
+        android:layout_alignStart="@+id/callCheckBox" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:id="@+id/startBtn"
+        android:onClick="start"
+        android:layout_below="@+id/timeview"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/raiseSlider"
+        android:minWidth="100dp"
+        android:layout_alignTop="@+id/raiseBox"
+        android:layout_toRightOf="@+id/raiseBox"
+        android:layout_toEndOf="@+id/raiseBox"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_alignBottom="@+id/raiseBox"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/raiseValue"
+        android:layout_alignBaseline="@+id/callCheckBox"
+        android:layout_alignBottom="@+id/callCheckBox"
+        android:layout_toRightOf="@+id/raiseSlider"
+        android:minWidth="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAY"
+        android:id="@+id/playbtn"
+        android:onClick="play"
+        android:enabled="false"
+        android:visibility="invisible"
+        android:layout_below="@+id/startBtn"
+        android:layout_alignLeft="@+id/startBtn"
+        android:layout_alignStart="@+id/startBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEAVE TABLE"
+        android:id="@+id/leavebtn"
+        android:onClick="leave"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time : 0"
+        android:id="@+id/timeview"
+        android:textSize="15dp"
+        android:textColor="#ff0000"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/leavebtn"
+        android:layout_alignLeft="@+id/startBtn"
+        android:layout_alignStart="@+id/startBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info"
+        android:id="@+id/infoview"
+        android:textSize="15dp"
+        android:layout_below="@+id/startBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/endRound"
+        android:textSize="25dp"
+        android:layout_alignBottom="@+id/playbtn"
+        android:layout_toLeftOf="@+id/playbtn"
+        android:layout_toStartOf="@+id/playbtn"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp"
+        />
+
+</RelativeLayout>

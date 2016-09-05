@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="gui.MainMenuActivity"
+    android:background="@drawable/main"
+    >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/playbtn"
+        android:onClick="play"
+        android:layout_marginTop="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title"
+        android:layout_marginRight="46dp"
+        android:layout_marginEnd="46dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATS"
+        android:id="@+id/statsbtn"
+        android:onClick="stats"
+        android:layout_below="@+id/playbtn"
+        android:layout_alignLeft="@+id/playbtn"
+        android:layout_alignStart="@+id/playbtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABOUT"
+        android:id="@+id/aboutbtn"
+        android:onClick="about"
+        android:layout_below="@+id/statsbtn"
+        android:layout_alignLeft="@+id/statsbtn"
+        android:layout_alignStart="@+id/statsbtn" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXIT"
+        android:id="@+id/exitbtn"
+        android:onClick="exit"
+        android:layout_below="@+id/aboutbtn"
+        android:layout_alignLeft="@+id/aboutbtn"
+        android:layout_alignStart="@+id/aboutbtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poker Game"
+        android:id="@+id/title"
+        android:textSize="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
